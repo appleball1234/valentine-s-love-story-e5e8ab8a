@@ -15,6 +15,7 @@ import { LoveLetterSlideNew } from "./slides/LoveLetterSlideNew";
 import { FutureDreamsSlide } from "./slides/FutureDreamsSlide";
 import { SurpriseSlide } from "./slides/SurpriseSlide";
 import { FinalProposalSlide } from "./slides/FinalProposalSlide";
+import { CountdownSlide } from "./slides/CountdownSlide";
 import { CelebrationSlide } from "./slides/CelebrationSlide";
 
 export const ValentineApp = () => {
@@ -24,14 +25,14 @@ export const ValentineApp = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  const totalSlides = saidYes ? 9 : 8;
+  const totalSlides = saidYes ? 10 : 9;
   const minSwipeDistance = 50;
 
   function handleYes() {
     setSaidYes(true);
     setShowYesConfetti(true);
     setTimeout(() => {
-      setCurrentSlide(8);
+      setCurrentSlide(9);
       setShowYesConfetti(false);
     }, 1500);
   }
@@ -44,6 +45,7 @@ export const ValentineApp = () => {
     <LoveLetterSlideNew key="letter" />,
     <FutureDreamsSlide key="future" />,
     <SurpriseSlide key="surprise" />,
+    <CountdownSlide key="countdown" />,
     <FinalProposalSlide key="proposal" onYes={handleYes} />,
     ...(saidYes ? [<CelebrationSlide key="celebration" />] : []),
   ];
