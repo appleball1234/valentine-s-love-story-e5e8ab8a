@@ -5,6 +5,7 @@ import { FloatingElements } from "./FloatingElements";
 import { TwinklingStars } from "./TwinklingStars";
 import { CursorHearts } from "./CursorHearts";
 import { CutePopups } from "./CutePopups";
+import { MusicPlayer } from "./MusicPlayer";
 import { Confetti } from "./Confetti";
 import { NameSlide } from "./slides/NameSlide";
 import { AboutHerSlide } from "./slides/AboutHerSlide";
@@ -93,6 +94,7 @@ export const ValentineApp = () => {
       <TwinklingStars />
       <FloatingElements />
       <CursorHearts />
+      <MusicPlayer />
       <CutePopups />
 
       {showYesConfetti && <Confetti />}
