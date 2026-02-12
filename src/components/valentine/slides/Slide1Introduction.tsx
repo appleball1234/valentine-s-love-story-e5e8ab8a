@@ -41,22 +41,6 @@ export const Slide1Introduction = () => {
           your so-called boring boyfriend 😌
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.5 }}
-          className="flex flex-col items-center gap-2"
-        >
-          <span className="text-primary-foreground/50 font-body text-sm">
-            👇 Swipe to continue
-          </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity }}
-          >
-            <ChevronDown className="w-6 h-6 text-primary-foreground/50" />
-          </motion.div>
-        </motion.div>
       </div>
     </SlideContainer>
   );
